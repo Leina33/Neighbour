@@ -1,31 +1,42 @@
-{% load bootstrap4 %} {% load static%}
-<!DOCTYPE html>
-<html>
+{%extends "registration/base.html"%}
+{% load bootstrap4 %}
+{%load static%}
+{% block content %}
+
 
 <head>
-  <meta charset="utf-8"> {% if title %}
-  <title> Neighhood app - {{title}}</title>
-  {% else %}
-  <title> The Neighood </title>
-  {% endif %} {% block styles %} {% bootstrap_css %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Concert+One|Didact+Gothic|Dosis|K2D|Vidaloka" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-  {% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>Change  Your Profile Information</title>
+  {{form.media}}
+
+{% block styles %} {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}"> {% endblock %}
 
 </head>
 
 <body>
-  {% include "navbar.html" %} {% block content %}
-  <h1 class='text-center'> Images for Today </h1> {%endblock%} {% block scripts %}
+<div class="container" style="background-color:black; color:white;font-family: 'Dosis', sans-serif;">
+
+     <div class="row">
+
+
+  <form  action="{%url 'edit_profile'%}" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+
+    {% bootstrap_form form%}
+    <input id="id_myfield" type="submit" class="btn btn-success btn-lg" value="Post">
+  </form>
+
+   {% block scripts %}
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://ucarecdn.com/libs/widget/3.6.1/uploadcare.min.js" charset="utf-8"></script>
   {% bootstrap_javascript %} {% endblock %}
 
 
+     </div>
+</div>
 
 </body>
-
-</html>
+{% endblock %}
