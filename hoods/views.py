@@ -6,11 +6,11 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .forms import *
 from django.contrib import messages
-# from .email import send_welcome_email
+from .email import send_welcome_email
 from django.urls import reverse
 
 
-# @login_required(login_url='/accounts/login/')
+@login_required(login_url='/accounts/login/')
 def home_projects (request):
     # Display all projects here:
 
