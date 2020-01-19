@@ -17,7 +17,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="fill" style=" background-color:#dddd;">
+            <div class="fill" style=" background-color:rgba(18, 214, 198, 0.867);">
               <h1 class="animated bounceInLeft loop" style="font-family: 'Dosis', cursive; color:white;font-size:70px;">The Neighbourhood</h1>
               <br>
               <h1 class="animated bounceInRight loop "style="font-family: 'Dosis', cursive; color:white;font-size:25px">News About Your Neighbourhood
@@ -124,18 +124,18 @@
 </div>
 
 
-<div class="jumbotron text-center mt-0 mb-0" style="background-color:#000000;font-family: 'Dosis', sans-serif;">
+<div class="jumbotron text-center mt-0 mb-0" style="background-color:wheat;font-family: 'Dosis', sans-serif;">
   <h2 class="animated zoomInLeft" style="text-align:center;font-size:40px;color:#ffffff;"><strong>NEIGHBOURHOOD DIRECTORY</strong></h2>
-      <div class="card-deck d-flex w-32 " style="background-color:#000000">
+      <div class="card-deck d-flex w-32 " style="background-color:wheat">
         {% for neighbourhood in neighbourhoods %}
-        <div class="card w-33 border border-info" style="background-color:#000000">
+        <div class="card w-33 border border-info" style="background-color:wheat">
             <div class="card-title border-bottom">
               <p style="font-size:20px;color:white;"><strong>NEIGHBOURHOOD:</strong>
 
                 <strong><a href="/neighbourhood/{{neighbourhood.id}}">{{neighbourhood.neighbourhood_name}}</a></strong> </p>
             </div>
 
-            <div class="card-body border-info w-33" style="background-color:black;">
+            <div class="card-body border-info w-33" style="background-color:whitesmoke;">
               <p style="color:white;">{{neighbourhood.neighbourhood_location}} </p>
               <p style="font-family: 'Dosis', sans-serif; text-align:center;color:white"> Resident Population:
 

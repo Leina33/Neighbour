@@ -2,8 +2,9 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
 def send_welcome_email(name,receiver):
+    
     # Creating message subject and sender
-    subject = 'Welcome to the Neighoods  NewsLetter'
+    subject = 'Welcome to the Neighbourhoods  NewsLetter'
     sender = 'dominickrutto@gmail.com'
 
     #passing in the context vairables

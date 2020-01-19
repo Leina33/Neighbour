@@ -30,15 +30,7 @@ class Location(models.Model):
     def __str__(self):
         return self.name
     
-class Image(models.Model):
-    image = models.ImageField(upload_to='picture/', )
-    name = models.CharField(max_length=40)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, related_name="images")
-    description = models.TextField()
-    location = models.ForeignKey(Location, null=True)
-    tags = models.ManyToManyField(tags, blank=True)
-    likes = models.IntegerField(default=0)
-    comments = models.TextField(blank=True)
+
 
 class Image(models.Model):
     image = models.ImageField(upload_to='picture/', )
@@ -314,5 +306,3 @@ class Join(models.Model):
 	user_id = models.ForeignKey(User, on_delete=models.CASCADE,related_name="neighbourhooduser",null=True,blank=True)
 	neighbourhood_id = models.ForeignKey(Neighbourhood, on_delete=models.CASCADE,related_name="neighbourhoodjoin",null=True,blank=True)
 
-	def __str__(self):
-		return self.user_id
