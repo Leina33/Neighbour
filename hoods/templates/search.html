@@ -1,0 +1,26 @@
+{%extends 'base.html'%} 
+{% block content %}
+<!-- *************************search for business around the neigghbourhood********** -->
+<div class="container">
+
+  <div class="row">
+
+    {% if businesses %}
+    <div class="container">
+
+      <div class="card-columns">
+
+        {% for business in businesses %}
+        <div class="card border-secondary">
+          <p class="{{business.business_name}}"> <a href="{{business.id}}"></a></p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% endif %}
+  </div>
+</div>
+
+
+{% endblock %}
