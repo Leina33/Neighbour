@@ -1,0 +1,4 @@
+Hello {{name}}
+
+Welcome to the  Neighhood Website!
+    You will be able to rate and review projects within this area!!.
