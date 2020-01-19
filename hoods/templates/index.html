@@ -15,7 +15,7 @@
 
         </ol>
         <!-- Wrapper for slides -->
-        <div class="carousel-inner" style="">
+        <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="fill" style=" background-color:#dddd;">
               <h1 class="animated bounceInLeft loop" style="font-family: 'Dosis', cursive; color:white;font-size:70px;">The Neighbourhood</h1>
@@ -76,7 +76,7 @@
               </h1>
               <div class="card-columns">
                 {% for project in projects %}
-                <div class="card border-secondary w-33" style=" background-color:##7fc2f4;"><a href="{% url 'project' project.id %}">
+                <div class="card border-secondary w-33" style=" background-color:#7fc2f4;"><a href="{% url 'project' project.id %}">
 
                     <img src="{{project.project_image.url}}" data-target="#imageModal{{project.id}}" data-toggle="modal" alt="" class="img-fluid"
                       id="eachimage15" size="100px200"></a>
