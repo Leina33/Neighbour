@@ -101,3 +101,7 @@ class Neighbourhood(models.Model):
         ('Nakuru', 'Nakuru'),
         ('Eldoret', 'Eldoret'),
     )
+    
+    neighbourhood_name = models.CharField(max_length=30)
+    neighbourhood_location = models.CharField(choices=CITY_CHOICES, max_length=200 ,default=0, null=True, blank=True)
+    population= models.IntegerField(default=0, null=True, blank=True)
