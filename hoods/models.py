@@ -90,3 +90,14 @@ class Image(models.Model):
     def update_description(cls, id):
         pictures = cls.objects.filter(id=id).update(id=id)
         return pictures
+    
+    #################class Neighbour with differnt location based on my place i am located##########
+class Neighbourhood(models.Model):
+    CITY_CHOICES = (
+        ('Nairobi', 'Nairobi'),
+        ('Mombasa', 'Mombasa'),
+        ('Kisumu', 'Kisumu'),
+        ('Malindi', 'Malindi'),
+        ('Nakuru', 'Nakuru'),
+        ('Eldoret', 'Eldoret'),
+    )
