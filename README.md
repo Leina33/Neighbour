@@ -73,4 +73,4 @@ As a user I would like to:
 
 ## License
 
-MIT &copy;2019 [DOminic Rutto](https://github.com/Leina33)
+MIT &copy;2019 [License Here](LICENSE)
